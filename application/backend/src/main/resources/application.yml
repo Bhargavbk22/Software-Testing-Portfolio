@@ -1,0 +1,54 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: lost-and-found
+  datasource:
+    url: ${DB_URL:jdbc:mysql://localhost:3306/lost_and_found?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC}
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:}
+  jpa:
+    hibernate:
+      ddl-auto: ${DDL_AUTO:update}
+    open-in-view: false
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 12MB
+app:
+  # DEV-ONLY default secret. Always override JWT_SECRET outside local development (min. 32 chars).
+  jwt:
+    secret: ${JWT_SECRET:dev-only-secret-change-me-dev-only-secret-change-me}
+    expiration-minutes: ${JWT_EXPIRATION_MINUTES:120}
+  upload-dir: ${UPLOAD_DIR:uploads}
+  cors-origins: ${CORS_ORIGINS:http://localhost:5173}
+  seed-demo-data: ${SEED_DEMO_DATA:true}
+  seed-password: ${SEED_PASSWORD:Demo@12345}
+  matching:
+    min-score: 50
+  # Configurable validation limits (see documentation/Business_Rules.md)
+  validation:
+    name-min-length: 2
+    name-max-length: 100
+    item-name-min-length: 2
+    item-name-max-length: 100
+    password-min-length: 8
+    password-max-length: 64
+    description-min-length: 10
+    description-max-length: 1000
+    location-max-length: 150
+    claim-explanation-min-length: 20
+    claim-explanation-max-length: 1000
+    image-max-size-bytes: 2097152
+    max-images-per-item: 3
+    date-max-age-days: 730
+    allowed-image-types: image/jpeg,image/png,image/webp
+    allowed-image-extensions: jpg,jpeg,png,webp
+    phone-pattern: '^\+?[0-9]{10,15}$'
+    student-id-pattern: '^[A-Za-z0-9]{5,20}$'
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
