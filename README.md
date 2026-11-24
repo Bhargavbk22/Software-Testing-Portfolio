@@ -12,10 +12,10 @@
 |---|---|
 | **Subject** | Software Testing |
 | **Department** | Information Science and Engineering |
-| **Semester / Section** | _<fill in>_ |
-| **Institution** | _<fill in>_ |
-| **Faculty** | _<fill in>_ |
-| **Academic Year** | _<fill in>_ |
+| **Semester / Section** | _VII_ |
+| **Institution** | _Ramaiah Institute of Technology_ |
+| **Faculty** | _Kavya_ |
+| **Academic Year** | _2026_ |
 
 ---
 
