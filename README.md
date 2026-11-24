@@ -15,7 +15,7 @@
 | **Semester / Section** | _VII_ |
 | **Institution** | _Ramaiah Institute of Technology_ |
 | **Faculty** | _Kavya_ |
-| **Academic Year** | _2026_ |
+| **Academic Year** | _2026 _ |
 
 ---
 
