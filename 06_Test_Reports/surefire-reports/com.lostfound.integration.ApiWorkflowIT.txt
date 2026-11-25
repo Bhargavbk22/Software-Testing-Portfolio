@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.lostfound.integration.ApiWorkflowIT
+-------------------------------------------------------------------------------
+Tests run: 18, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 19.53 s -- in com.lostfound.integration.ApiWorkflowIT
